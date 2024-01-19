@@ -43,3 +43,9 @@ const team = [
     },
   ];
   
+
+  //uso for.each per stampare 
+  team.forEach(person => {
+    console.log(`Name: ${person.name}, Role: ${person.role}, Picture: ${person.picture}`);
+  });
+  
