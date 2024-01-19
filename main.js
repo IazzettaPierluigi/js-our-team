@@ -54,5 +54,25 @@ const team = [
   });
   
   team.forEach(person => {
-    rowHtml.innerHTML += (`<div class="col-4">Name: ${person.name}, Role: ${person.role},  <img src="./assets/img/${person.picture}" alt=""></div>`)
+    // rowHtml.innerHTML += (`<div class="col-4">Name: ${person.name}, Role: ${person.role},  <img src="./assets/img/${person.picture}" alt=""></div>`)
+
+    rowHtml.innerHTML += (
+        `<div class="card" style="width: 18rem;">
+  <img src="./assets/img/${person.picture}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${person.name}</h5>
+    <p class="card-text">${person.role}.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>`
+    )
   })
+
+  `<div class="card" style="width: 18rem;">
+  <img src="./assets/img/${person.picture}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{person.name}</h5>
+    <p class="card-text">{person.role}.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>`
