@@ -10,6 +10,10 @@
 // MILESTONE 2:
 // Stampare le stesse informazioni su DOM sottoforma di stringhe
 
+let containerHtml = document.querySelector('.container')
+
+let rowHtml = document.querySelector('.row')
+
 const team = [
     {
       name: "Wayne Barnett",
@@ -49,3 +53,6 @@ const team = [
     console.log(`Name: ${person.name}, Role: ${person.role}, Picture: ${person.picture}`);
   });
   
+  team.forEach(person => {
+    rowHtml.innerHTML += (`<div class="col-4">Name: ${person.name}, Role: ${person.role},  <img src="./assets/img/${person.picture}" alt=""></div>`)
+  })
